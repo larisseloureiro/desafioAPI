@@ -1,0 +1,753 @@
+{
+	"info": {
+		"_postman_id": "8dd2fa27-04eb-4575-a412-b68f6784e07a",
+		"name": "Desafio Loja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Produtos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI4MTUxODIsImV4cCI6MTYyMjkwMTU4Mn0.JE7Q3j88M6LhfhKrhaCCBnzK6weN_H9RA9ZGePIV39Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NzkwMzYsImV4cCI6MTYyMjc2NTQzNn0.51idSuCFM-M9S9F-fKOSTIYefcuBUHVzPvnj7fuyNIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nome\": \"Novo produto\",\r\n        \"descricao\": \"produto para atualizar e deletar\",\r\n        \"unidade\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NzkwMzYsImV4cCI6MTYyMjc2NTQzNn0.51idSuCFM-M9S9F-fKOSTIYefcuBUHVzPvnj7fuyNIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nome\": \"Produto atualizado com sucesso\",\r\n        \"descricao\": \"produto para deletar, codigo 5\",\r\n        \"unidade\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NzkwMzYsImV4cCI6MTYyMjc2NTQzNn0.51idSuCFM-M9S9F-fKOSTIYefcuBUHVzPvnj7fuyNIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI0ODA5NTksImV4cCI6MTYyMjU2NzM1OX0.1BAZNTHpmGYwlp1f_xj3WMJRh5hltpte1k82Hk4IE4M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Estoque",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NzkwMzYsImV4cCI6MTYyMjc2NTQzNn0.51idSuCFM-M9S9F-fKOSTIYefcuBUHVzPvnj7fuyNIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estoque",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estoque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Estoque",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDY1ODksImV4cCI6MTYyMjczMjk4OX0.zxXHfbMxEJBxeeAssHGNmEalpWngsPzBjfiRAdoPv7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \r\n        \"produto\": {\r\n            \"codigo\": 1,\r\n            \"nome\": \"Oxford Vegano Unissex\",\r\n            \"descricao\": \"Oxford Vegano Unissex Heavy Preto - Tamanhos 40 a 44\",\r\n            \"unidade\": \"Unitário\"\r\n        },\r\n        \"quantidade\": 2,\r\n        \"valorVenda\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/estoque/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estoque",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Fornecedor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"codigo\": 1,\r\n        \"cnpj\": \"111.222.222.222.22\",\r\n        \"nome\": \"diego gonzales\",\r\n        \"telefone\": \"(11) 9 8829-9292\",\r\n        \"email\": \"lelo@gft.com\",\r\n        \"logradouro\": \"rua 1\",\r\n        \"numero\": \"244\",\r\n        \"complemento\": \"casa\",\r\n        \"cep\": \"18077-333\",\r\n        \"bairro\": \"bairro 1\",\r\n        \"municipio\": \"Sorocaba\",\r\n        \"estado\": \"São Paulo\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fornecedor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fornecedor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Fornecedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDQ0NDQsImV4cCI6MTYyMjczMDg0NH0.f62-x5fM8gRKkibAdjci9adYtlq-kYnaVz-HnPoMgYI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI0ODMyODgsImV4cCI6MTYyMjU2OTY4OH0.yk8C_pU75HEahj-HQm-MO9LCP_50B9PDHIx1Xjf4gqc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \r\n        \"cnpj\": \"444.222.222.222.22\",\r\n        \"nome\": \"Atualizar e deletar\",\r\n        \"telefone\": \"(15) 9 2929-0292\",\r\n        \"email\": \"lelo@gft.com\",\r\n        \"endereco\": {\r\n            \"logradouro\": \"rua 1\",\r\n            \"numero\": \"244\",\r\n            \"complemento\": \"casa\",\r\n            \"bairro\": \"bairro 1\",\r\n            \"cep\": \"18077-333\",\r\n            \"cidade\": \"Sorocaba\",\r\n            \"estado\": \"São Paulo\"\r\n        }\r\n    }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fornecedor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fornecedor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Fornecedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDY1ODksImV4cCI6MTYyMjczMjk4OX0.zxXHfbMxEJBxeeAssHGNmEalpWngsPzBjfiRAdoPv7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fornecedor/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fornecedor",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Fornecedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fornecedor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fornecedor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDY1ODksImV4cCI6MTYyMjczMjk4OX0.zxXHfbMxEJBxeeAssHGNmEalpWngsPzBjfiRAdoPv7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n        \"cpf\": \"333.111.111.22\",\r\n        \"nome\": \"Cliente atualizar e deletar\",\r\n        \"telefone\": \"(15) 9 2222-2222\",\r\n        \"email\": \"test@gft.com\",\r\n  \"endereco\":{\r\n \"logradouro\": \"rua 1\",\r\n        \"numero\": \"333\",\r\n        \"complemento\": \"apto\",\r\n        \"cep\": \"18077-222\",\r\n        \"bairro\": \"bairro 2\",\r\n        \"cidade\": \"Sorocaba\",\r\n        \"estado\": \"São Paulo\"\r\n  } \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Clientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDY1ODksImV4cCI6MTYyMjczMjk4OX0.zxXHfbMxEJBxeeAssHGNmEalpWngsPzBjfiRAdoPv7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDY1ODksImV4cCI6MTYyMjczMjk4OX0.zxXHfbMxEJBxeeAssHGNmEalpWngsPzBjfiRAdoPv7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n        \"cpf\": \"333.111.111.22\",\r\n        \"nome\": \"Cliente atualizado com sucesso\",\r\n        \"telefone\": \"(15) 9 2222-2222\",\r\n        \"email\": \"test@gft.com\",\r\n  \"endereco\":{\r\n \"logradouro\": \"rua 1\",\r\n        \"numero\": \"333\",\r\n        \"complemento\": \"apto\",\r\n        \"cep\": \"18077-222\",\r\n        \"bairro\": \"bairro 2\",\r\n        \"cidade\": \"Sorocaba\",\r\n        \"estado\": \"São Paulo\"\r\n  } \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NDY1ODksImV4cCI6MTYyMjczMjk4OX0.zxXHfbMxEJBxeeAssHGNmEalpWngsPzBjfiRAdoPv7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cliente/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Compras",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI2NzkwMzYsImV4cCI6MTYyMjc2NTQzNn0.51idSuCFM-M9S9F-fKOSTIYefcuBUHVzPvnj7fuyNIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"codigo\": 1,\r\n        \"fornecedor\": {\r\n            \"codigo\": 1,\r\n            \"cnpj\": \"222.222.222.222.22\",\r\n            \"nome\": \"diego\",\r\n            \"telefone\": \"(15) 9 2929-0292\",\r\n            \"email\": \"lelo@gft.com\",\r\n            \"endereco\": {\r\n                \"logradouro\": \"rua 1\",\r\n                \"numero\": \"244\",\r\n                \"complemento\": \"casa\",\r\n                \"bairro\": \"bairro 1\",\r\n                \"cep\": \"18077-333\",\r\n                \"cidade\": \"Sorocaba\",\r\n                \"estado\": \"São Paulo\"\r\n            }\r\n        },\r\n         \"codigo\": 2,\r\n       \"itensCompra\":{\r\n        \"produto\" : {\r\n        \"codigo\" : 2\r\n    },\r\n        \"quantidade\" : 20,\r\n        \"valor\" : 20\r\n    } \r\n\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compra",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Compra",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI3NDEzNTgsImV4cCI6MTYyMjgyNzc1OH0.fIVbfMVTxOYw9TJxe_lODcAmoAYMLq5p1nwr5bbrvdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"fornecedor\": {\r\n\r\n        \"codigo\": 1\r\n\r\n        },\r\n\r\n    \"itensCompra\":[{\r\n\r\n    \"produto\" : {\r\n    \"codigo\" : 1  \r\n\r\n     },\r\n\r\n     \"quantidade\" : 10,\r\n\r\n     \"valor\": 10\r\n    }]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compra",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Vendas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI3NDEzNTgsImV4cCI6MTYyMjgyNzc1OH0.fIVbfMVTxOYw9TJxe_lODcAmoAYMLq5p1nwr5bbrvdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/venda",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Venda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjIiLCJpYXQiOjE2MjI3NDIzNDUsImV4cCI6MTYyMjgyODc0NX0.Fix5AkVnOaaeyAXHSySEg25tDa7oKpX_bVlPnIDKjTs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"cliente\": {\r\n\r\n        \"codigo\": 1\r\n\r\n        },\r\n\r\n    \"itensVenda\":[{\r\n\r\n    \"produto\" : {\r\n    \"codigo\" : 2\r\n   \r\n\r\n     },\r\n\r\n     \"quantidade\" : 1\r\n    }]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/venda/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venda",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Venda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI3NDEzNTgsImV4cCI6MTYyMjgyNzc1OH0.fIVbfMVTxOYw9TJxe_lODcAmoAYMLq5p1nwr5bbrvdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\"cliente\" : {\r\n\"codigo\": 1\r\n},\r\n\"itensVenda\":[{\r\n\"produto\" : {\r\n\"codigo\" : 1\r\n},\r\n\"quantidade\" : 10\r\n},\r\n{ \"produto\" : {\r\n\"codigo\" : 1\r\n},\r\n\"quantidade\" : 1\r\n}]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/venda",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Loja",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI0ODA5NTksImV4cCI6MTYyMjU2NzM1OX0.1BAZNTHpmGYwlp1f_xj3WMJRh5hltpte1k82Hk4IE4M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI0ODA5NTksImV4cCI6MTYyMjU2NzM1OX0.1BAZNTHpmGYwlp1f_xj3WMJRh5hltpte1k82Hk4IE4M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"loja@gft.com\",\r\n    \"senha\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"cliente@gft.com\",\r\n    \"senha\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar produtos por Nome ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgTG9qYSIsInN1YiI6IjEiLCJpYXQiOjE2MjI4MTUxODIsImV4cCI6MTYyMjkwMTU4Mn0.JE7Q3j88M6LhfhKrhaCCBnzK6weN_H9RA9ZGePIV39Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/produtos/nome/unissex",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos",
+						"nome",
+						"unissex"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
